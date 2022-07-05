@@ -1,5 +1,5 @@
 
-NAME			= libftprintf.h
+NAME			= libftprintf.a
 LIBFT_DIR		= ./libft
 LIBFT		= $(LIBFT_DIR)/libft.a
 CC 			= gcc
@@ -20,7 +20,7 @@ all:			  $(NAME)
 
 $(NAME):		$(OBJS) $(LIBFT)
 					ar rcs $(NAME) $(OBJS)
-					$(LIB1) $(NAME)
+					
 
 .c.o:
 			$(CC) $(CFLAGS) $(INCS) -c $< -o $(<:.c=.o)
