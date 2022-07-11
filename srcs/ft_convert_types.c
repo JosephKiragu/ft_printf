@@ -93,7 +93,7 @@ void ft_add_prefix(t_placeholder *holder, int sign)
 		if(ft_strchr(holder->prefix, PLUS) && sign == 1)
 			ft_pad_left(&holder->argument, PLUS, len);
 		else if (ft_strchr(holder->prefix, SPACE) && sign == 1)
-			ft_pad_left(&holder->argument, PLUS, len);
+			ft_pad_left(&holder->argument, MINUS, len);
 		// else if (sign == -1)
 		// 	ft_pad_left(&holder->argument, MINUS, len); //possibly remove this block
 	}
