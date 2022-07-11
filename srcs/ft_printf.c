@@ -21,10 +21,10 @@
 # include "../libft/ft_strdup.c"
 # include "../libft/ft_strlen.c"
 # include "../libft/ft_memcpy.c"
-# include "../libft/ft_strlcat.c"
+// # include "../libft/ft_strlcat.c"
 # include "../libft/ft_strlcpy.c"
 # include "../libft/ft_itoa.c"
-# include "../libft/ft_calloc.c"
+// # include "../libft/ft_calloc.c"
 # include "../libft/ft_bzero.c"
 # include "../libft/ft_strjoin.c"
 
@@ -68,28 +68,28 @@ int		ft_printf(const char *format, ...)
 	return (len);
 }
 
-int main (void)
-{
-	char *null_str = NULL;
-	// char *ptr;
-	// char x = 'c';
-	// ptr = &x;
+// int main (void)
+// {
+// 	char *null_str = NULL;
+// 	// char *ptr;
+// 	// char x = 'c';
+// 	// ptr = &x;
 
-	// // //ft_printf("This is character %--c\n", 'x');
-	// int z;
-	// int y;
+// 	// // //ft_printf("This is character %--c\n", 'x');
+// 	// int z;
+// 	// int y;
 
-	// // // x = ft_printf("This is character %.2s\n", "Hello");
+// 	// // // x = ft_printf("This is character %.2s\n", "Hello");
 
-	// // // y = printf("This is character %.2s\n", "Hello");
+// 	// // // y = printf("This is character %.2s\n", "Hello");
 	
-	// z = printf("Value is %20u\t%20p\t%s\t%20x\t%20%\n", 78909, ptr, "Hello", 29182);
-	// y = ft_printf("Value is %20u\t%20p\t%s\t%20x\t%20%\n", 78909, ptr, "Hello", 29182);
+// 	// z = printf("Value is %20u\t%20p\t%s\t%20x\t%20%\n", 78909, ptr, "Hello", 29182);
+// 	// y = ft_printf("Value is %20u\t%20p\t%s\t%20x\t%20%\n", 78909, ptr, "Hello", 29182);
 
-	// printf("original function = %d\n", z);
-	// printf("my function = %d\n", y);
+// 	// printf("original function = %d\n", z);
+// 	// printf("my function = %d\n", y);
 
-	 ft_printf("%.3d\n", -1);
-	 printf("%.3d", -1);
-}
+// 	 ft_printf("%.3d\n", -1);
+// 	 printf("%.3d", -1);
+// }
 
