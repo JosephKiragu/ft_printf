@@ -33,7 +33,6 @@ void ft_pad_left(char **str, char padding, int width)
 	if(!width || width < (int)strlen)
 		width = strlen;
 	temp = (char *) malloc(sizeof(char) * width); 
-
 	if (!temp)
 		return ;
 	padlen = width - strlen;

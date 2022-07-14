@@ -1,22 +1,5 @@
 # include "../includes/libftprintf.h"
 
-// static void	strrev(char *str)
-// {
-// 	size_t	len;
-// 	size_t	i;
-// 	size_t	temp;
-
-// 	len = ft_strlen(str);
-// 	i = 0;
-// 	while (i < len / 2)
-// 	{
-// 		temp = str[i];
-// 		str[i] = str[len - i - 1];
-// 		str[len - i - 1] = temp;
-// 		i++;
-// 	}
-// }
-
 char *pos_itoa(unsigned int num) // try using this statically
 {
 	char *str;
@@ -48,7 +31,7 @@ void ft_print_unsigned_digit(t_fmt *fmt, t_placeholder *holder)
 	free(digit);
 	if (holder->precision > -1)
 	{
-		if(!holder->argument && holder->precision == 0)
+		if(!holder->precision && number == 0)
 		{
 			free(holder->argument);
 			holder->argument = ft_strdup("");

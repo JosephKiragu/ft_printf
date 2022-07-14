@@ -89,7 +89,13 @@ int		ft_printf(const char *format, ...)
 // 	// printf("original function = %d\n", z);
 // 	// printf("my function = %d\n", y);
 
-// 	 ft_printf("%.3d\n", -1);
-// 	 printf("%.3d", -1);
+// 	// ft_printf("%.3d\n", -1);
+// 	// printf("%.3d\n", -1);
+
+// 	//  ft_printf("mine: %.0u\n", 0);
+// 	//  printf("original: %.0u\n", 0);
+
+// 	// ft_printf("my function : %01.0u\n", 0);
+// 	// printf(" Original function : %01.0u\n", 0);
 // }
 

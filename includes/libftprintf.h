@@ -87,5 +87,7 @@ void ft_pad_left(char **str, char padding, int width);
 void ft_pad_right(char **str, char padding, int width);
 void ft_add_prefix(t_placeholder *holder, int sign);
 void ft_hex_prefix(t_placeholder *holder);
+void ft_digit_width(t_placeholder *holder, int sign);
+char	*ft_uitoa_base(unsigned long long nbr, char *base);
 
 #endif
