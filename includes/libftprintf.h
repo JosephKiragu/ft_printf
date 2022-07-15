@@ -24,10 +24,7 @@
 # define MINUS '-'
 # define PLUS '+'
 
-
-// structures
-
-typedef  struct s_fmt
+typedef struct s_fmt
 {
 	const char	*format;
 	va_list		vargs;
@@ -44,50 +41,47 @@ typedef struct s_placeholder
 	int		justify_left;
 	int		width;
 	int		precision;
-	size_t	counter;		
+	size_t	counter;
 }	t_placeholder;
 
-
 // main functions
-int		ft_printf(const char *format, ...);
-int		ft_struct_printf(const char *format, va_list vargs);
+int				ft_printf(const char *format, ...);
+int				ft_struct_printf(const char *format, va_list vargs);
 
-
-
-// structure initializers
-t_fmt *ft_init_format(const char *format , va_list vargs);
-t_placeholder  *ft_init_placeholder(void);
+// structure functions
+t_fmt			*ft_init_format(const char *format , va_list vargs);
+t_placeholder	*ft_init_placeholder(void);
 
 // parsing functions
-void ft_placeholders(t_fmt *fmt);
-void	*ft_parser(t_fmt *fmt, t_placeholder *holder);
-void ft_parse_flags(t_fmt *fmt, t_placeholder *holder);
-void ft_parse_width(t_fmt *fmt, t_placeholder *holder);
-void ft_parse_precision(t_fmt *fmt, t_placeholder *holder);
+void			ft_placeholders(t_fmt *fmt);
+void			*ft_parser(t_fmt *fmt, t_placeholder *holder);
+void			ft_parse_flags(t_fmt *fmt, t_placeholder *holder);
+void			ft_parse_width(t_fmt *fmt, t_placeholder *holder);
+void			ft_parse_precision(t_fmt *fmt, t_placeholder *holder);
 
 //utility functions
-char *ft_append_char(char const *s1, char const c);
-char *ft_strndup(const char *str, size_t n);
-char *pos_itoa(unsigned int num);
-char *hex_itoa(unsigned long long num, char *base);
-void	strrev(char *str);
+char			*ft_append_char(char const *s1, char const c);
+char			*ft_strndup(const char *str, size_t n);
+char			*pos_itoa(unsigned int num);
+char			*hex_itoa(unsigned long long num, char *base);
+char			*ft_uitoa_base(unsigned long long nbr, char *base);
+void			strrev(char *str);
 
 // conversion functions
-void	ft_convert_by_type(t_fmt *fmt, t_placeholder *holder);
-void	ft_print_char(t_fmt *fmt, t_placeholder *holder);
-void ft_print_digit(t_fmt *fmt, t_placeholder *holder);
-void ft_print_unsigned_digit(t_fmt *fmt, t_placeholder *holder);
-void ft_print_hex(t_fmt *fmt, t_placeholder *holder, char *base);
-void ft_print_pointer(t_fmt *fmt, t_placeholder *holder);
-void ft_print_str(t_fmt *fmt, t_placeholder *holder);
-void ft_print_percent(t_placeholder *holder);
+void			ft_convert_by_type(t_fmt *fmt, t_placeholder *holder);
+void			ft_print_char(t_fmt *fmt, t_placeholder *holder);
+void			ft_print_digit(t_fmt *fmt, t_placeholder *holder);
+void			ft_print_unsigned_digit(t_fmt *fmt, t_placeholder *holder);
+void			ft_print_hex(t_fmt *fmt, t_placeholder *holder, char *base);
+void			ft_print_pointer(t_fmt *fmt, t_placeholder *holder);
+void			ft_print_str(t_fmt *fmt, t_placeholder *holder);
+void			ft_print_percent(t_placeholder *holder);
 
 // formatting functions
-void ft_pad_left(char **str, char padding, int width);
-void ft_pad_right(char **str, char padding, int width);
-void ft_add_prefix(t_placeholder *holder, int sign);
-void ft_hex_prefix(t_placeholder *holder);
-void ft_digit_width(t_placeholder *holder, int sign);
-char	*ft_uitoa_base(unsigned long long nbr, char *base);
+void			ft_pad_left(char **str, char padding, int width);
+void			ft_pad_right(char **str, char padding, int width);
+void			ft_add_prefix(t_placeholder *holder, int sign);
+void			ft_hex_prefix(t_placeholder *holder);
+void			ft_digit_width(t_placeholder *holder, int sign);
 
 #endif

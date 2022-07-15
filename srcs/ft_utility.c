@@ -1,29 +1,27 @@
 # include "../includes/libftprintf.h"
 
-
-char *ft_append_char(char const *s1, char const c)
+char	*ft_append_char(char const *s1, char const c)
 {
 	char	*concat;
 	size_t	len;
 	size_t	i;
 
 	len = ft_strlen(s1);
-
 	concat = (char *) malloc (sizeof(char) * (len + 2));
 	if (!concat)
 		return (NULL);
 	i = 0;
 	while (s1[i])
-		{
-			concat[i] = s1[i];
-			i++;
-		}
+	{
+		concat[i] = s1[i];
+		i++;
+	}
 	concat[i++] = c;
 	concat[i] = '\0';
 	return (concat);
 }
 
-char *ft_strndup(const char *str, size_t n)
+char	*ft_strndup(const char *str, size_t n)
 {
 	int		size;
 	char	*dest;
@@ -37,9 +35,9 @@ char *ft_strndup(const char *str, size_t n)
 	if (!dest)
 		return (NULL);
 	ft_memcpy(dest, str, size);
-	dest[size] = '\0'; // because ot begins from 0
+	dest[size] = '\0';
 	return (dest);
-} 
+}
 
 void	strrev(char *str)
 {

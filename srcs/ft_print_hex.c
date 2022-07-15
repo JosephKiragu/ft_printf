@@ -1,14 +1,13 @@
 # include "../includes/libftprintf.h"
 
-char *hex_itoa(unsigned long long num, char *base) // try using this statically
+char	*hex_itoa(unsigned long long num, char *base)
 {
-	char *str;
-	unsigned int len;
-	size_t base_len;
+	char			*str;
+	unsigned int	len;
+	size_t			base_len;
 
 	len = 0;
 	base_len = ft_strlen(base);
-	
 	str = ft_calloc(base_len + 1, sizeof(char));
 	if (!str)
 		return (NULL);
@@ -23,8 +22,7 @@ char *hex_itoa(unsigned long long num, char *base) // try using this statically
 	return (str);
 }
 
-
-void ft_print_hex(t_fmt *fmt, t_placeholder *holder, char *base)
+void	ft_print_hex(t_fmt *fmt, t_placeholder *holder, char *base)
 {
 	unsigned int	number;
 	char			*hex;
@@ -47,7 +45,7 @@ void ft_print_hex(t_fmt *fmt, t_placeholder *holder, char *base)
 		ft_hex_prefix(holder);
 	if (!holder->justify_left)
 		ft_pad_left(&holder->argument, holder->padding, holder->width);
-	else 
+	else
 		ft_pad_right(&holder->argument, ' ', holder->width);
 	holder->counter = ft_strlen(holder->argument);
 }

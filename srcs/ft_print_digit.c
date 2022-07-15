@@ -1,6 +1,5 @@
 # include "../includes/libftprintf.h"
 
-
 static void	ft_convbase(unsigned long long nbr, char *num, char *base, size_t i)
 {
 	size_t	len_base;
@@ -35,7 +34,7 @@ char	*ft_uitoa_base(unsigned long long nbr, char *base)
 	return (number);
 }
 
-void ft_digit_width(t_placeholder *holder, int sign)
+void	ft_digit_width(t_placeholder *holder, int sign)
 {
 	if (holder->justify_left)
 	{
@@ -49,19 +48,22 @@ void ft_digit_width(t_placeholder *holder, int sign)
 			ft_add_prefix(holder, sign);
 			ft_pad_left(&holder->argument, holder->padding, holder->width);
 		}
-		else if (holder->padding =='0')
+		else if (holder->padding == '0')
 		{
-			if (sign < 0 || ft_strchr(holder->prefix, ' ') || ft_strchr(holder->prefix, '+'))
-				ft_pad_left(&holder->argument, holder->padding, holder->width - 1);
-			else 
+			if (sign < 0 || ft_strchr(holder->prefix, ' ') || \
+				ft_strchr(holder->prefix, '+'))
+			{
+				ft_pad_left(&holder->argument, holder->padding, \
+							holder->width - 1);
+			}
+			else
 				ft_pad_left(&holder->argument, holder->padding, holder->width);
 			ft_add_prefix(holder, sign);
 		}
 	}
 }
-	
 
-void ft_print_digit(t_fmt *fmt, t_placeholder *holder)
+void	ft_print_digit(t_fmt *fmt, t_placeholder *holder)
 {
 	int			sign;
 	long int	arg;
@@ -84,37 +86,3 @@ void ft_print_digit(t_fmt *fmt, t_placeholder *holder)
 	ft_digit_width(holder, sign);
 	holder->counter = ft_strlen(holder->argument);
 }
-
-
-
-
-
-
-// {
-// 	int sign;
-// 	long int num;
-// 	char *digit;
-
-// 	sign = 1;
-// 	num = (int) va_arg(fmt->vargs, int);
-
-// 	if (num < 0)
-// 		sign *= -1;
-
-// 	digit = ft_itoa(num);
-// 	holder->argument = ft_strdup(digit);
-// 	free(digit);
-// 	if (holder->precision > -1)
-// 	{
-// 		if (!holder->precision && num == 0) // if holder precision == 1
-// 		{
-// 			free(holder->argument);
-// 			holder->argument = ft_strdup("");
-// 		}
-// 		ft_pad_left(&holder->argument, '0', holder->precision);
-// 		holder->padding = ' ';
-// 	}
-// 	ft_digit_width(holder, sign);
-// 	holder->counter = ft_strlen(holder->argument);
-
-// }

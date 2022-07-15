@@ -1,9 +1,9 @@
 # include "../includes/libftprintf.h"
 
-char *pos_itoa(unsigned int num) // try using this statically
+char	*pos_itoa(unsigned int num)
 {
-	char *str;
-	unsigned int len;
+	char			*str;
+	unsigned int	len;
 
 	len = 0;
 	str = ft_calloc(11, sizeof(char));
@@ -20,10 +20,10 @@ char *pos_itoa(unsigned int num) // try using this statically
 	return (str);
 }
 
-void ft_print_unsigned_digit(t_fmt *fmt, t_placeholder *holder)
+void	ft_print_unsigned_digit(t_fmt *fmt, t_placeholder *holder)
 {
-	unsigned int number;
-	char 		*digit;
+	unsigned int	number;
+	char			*digit;
 
 	number = (unsigned int) va_arg(fmt->vargs, unsigned int);
 	digit = pos_itoa(number);
@@ -31,7 +31,7 @@ void ft_print_unsigned_digit(t_fmt *fmt, t_placeholder *holder)
 	free(digit);
 	if (holder->precision > -1)
 	{
-		if(!holder->precision && number == 0)
+		if (!holder->precision && number == 0)
 		{
 			free(holder->argument);
 			holder->argument = ft_strdup("");
@@ -40,7 +40,7 @@ void ft_print_unsigned_digit(t_fmt *fmt, t_placeholder *holder)
 		holder->padding = ' ';
 	}
 	if (!holder->justify_left)
-		ft_pad_left(&holder->argument, holder->padding, holder->width); // CHECK IF CAN REPLACE THE SPACE WITH CONSTANT
+		ft_pad_left(&holder->argument, holder->padding, holder->width);
 	else
 		ft_pad_right(&holder->argument, ' ', holder->width);
 	holder->counter = ft_strlen(holder->argument);
