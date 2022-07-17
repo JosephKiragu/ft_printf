@@ -31,7 +31,7 @@
 int	ft_struct_printf(const char *format, va_list vargs)
 {
 	t_fmt	*fmt;
-	int		len;		
+	int		len;
 
 	fmt = ft_init_format(format, vargs);
 	if (!fmt)
