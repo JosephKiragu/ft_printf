@@ -39,12 +39,22 @@ void	ft_placeholders(t_fmt *fmt)
 	fmt->i++;
 	holder = ft_init_placeholder();
 	ft_parser(fmt, holder);
-	if (holder->conversion)
+	// if (holder->conversion == '\0')
+	// {
+	// 	//holder->conversion = NULL;
+	// 	printf("inside holder conversion tester\n");
+	// }
+	// //printf("Holder<-conversion inside ft_placeholders = %c\n", holder->conversion);
+	if (holder->conversion != '\0')
 	{
 		ft_convert_by_type(fmt, holder);
+		
 		fmt->count += write(1, holder->argument, holder->counter);
+		// printf("Value of holder<-argument in ft_init = %s\n",holder->argument);
+		// printf("Value of fmt-> count = %zu\n", fmt->count);
 		free(holder->argument);
 	}
+	
 	free(holder->prefix);
 	free(holder);
 }
