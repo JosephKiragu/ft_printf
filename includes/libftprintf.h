@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBPRINTF_H
-#define LIBPRINTF_H
+#ifndef LIBFTPRINTF_H
+# define LIBFTPRINTF_H
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -61,7 +61,7 @@ int				ft_printf(const char *format, ...);
 int				ft_struct_printf(const char *format, va_list vargs);
 
 // structure functions
-t_fmt			*ft_init_format(const char *format , va_list vargs);
+t_fmt			*ft_init_format(const char *format, va_list vargs);
 t_placeholder	*ft_init_placeholder(void);
 
 // parsing functions
