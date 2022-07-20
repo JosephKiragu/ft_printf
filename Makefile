@@ -41,6 +41,7 @@ $(NAME):	$(OBJS) $(LIBFT)
 			$(LIB)	$(NAME) $(OBJS)
 			$(LIB1) $(NAME)
 
+
 .c.o: 		
 			$(CC) $(CFLAGS) $(INCS) -c $< -o $(<:.c=.o)
 
