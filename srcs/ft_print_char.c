@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkiragu <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: josephkiragu <josephkiragu@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 18:40:55 by jkiragu           #+#    #+#             */
-/*   Updated: 2022/07/20 18:40:59 by jkiragu          ###   ########.fr       */
+/*   Updated: 2022/07/21 16:01:03 by josephkirag      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/libftprintf.h"
+#include "../includes/libftprintf.h"
 
 void	ft_print_char(t_fmt *fmt, t_placeholder *holder)
 {

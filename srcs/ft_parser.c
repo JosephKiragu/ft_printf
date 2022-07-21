@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_parser.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkiragu <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: josephkiragu <josephkiragu@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 18:40:33 by jkiragu           #+#    #+#             */
-/*   Updated: 2022/07/20 18:40:38 by jkiragu          ###   ########.fr       */
+/*   Updated: 2022/07/21 15:59:04 by josephkirag      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/libftprintf.h"
+#include "../includes/libftprintf.h"
 
 void	ft_parse_flags(t_fmt *fmt, t_placeholder *holder)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_pointer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkiragu <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: josephkiragu <josephkiragu@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 18:43:20 by jkiragu           #+#    #+#             */
-/*   Updated: 2022/07/20 18:43:23 by jkiragu          ###   ########.fr       */
+/*   Updated: 2022/07/21 16:01:53 by josephkirag      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/libftprintf.h"
+#include "../includes/libftprintf.h"
 
 static char	*ft_set_null(t_placeholder *holder)
 {

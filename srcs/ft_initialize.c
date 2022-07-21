@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_initialize.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkiragu <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: josephkiragu <josephkiragu@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 18:40:16 by jkiragu           #+#    #+#             */
-/*   Updated: 2022/07/20 18:40:20 by jkiragu          ###   ########.fr       */
+/*   Updated: 2022/07/21 16:00:52 by josephkirag      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/libftprintf.h"
+#include "../includes/libftprintf.h"
 
 t_fmt	*ft_init_format(const char *format, va_list vargs)
 {
@@ -51,22 +51,12 @@ void	ft_placeholders(t_fmt *fmt)
 	fmt->i++;
 	holder = ft_init_placeholder();
 	ft_parser(fmt, holder);
-	// if (holder->conversion == '\0')
-	// {
-	// 	//holder->conversion = NULL;
-	// 	printf("inside holder conversion tester\n");
-	// }
-	// //printf("Holder<-conversion inside ft_placeholders = %c\n", holder->conversion);
 	if (holder->conversion != '\0')
 	{
 		ft_convert_by_type(fmt, holder);
-		
 		fmt->count += write(1, holder->argument, holder->counter);
-		// printf("Value of holder<-argument in ft_init = %s\n",holder->argument);
-		// printf("Value of fmt-> count = %zu\n", fmt->count);
 		free(holder->argument);
 	}
-	
 	free(holder->prefix);
 	free(holder);
 }

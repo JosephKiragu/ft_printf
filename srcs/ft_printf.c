@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkiragu <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: josephkiragu <josephkiragu@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 18:44:40 by jkiragu           #+#    #+#             */
-/*   Updated: 2022/07/20 18:44:44 by jkiragu          ###   ########.fr       */
+/*   Updated: 2022/07/21 16:02:21 by josephkirag      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/libftprintf.h"
+#include "../includes/libftprintf.h"
 
 int	ft_struct_printf(const char *format, va_list vargs)
 {

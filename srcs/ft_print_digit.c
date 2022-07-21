@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_digit.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkiragu <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: josephkiragu <josephkiragu@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 18:42:12 by jkiragu           #+#    #+#             */
-/*   Updated: 2022/07/20 18:42:19 by jkiragu          ###   ########.fr       */
+/*   Updated: 2022/07/21 16:01:12 by josephkirag      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/libftprintf.h"
+#include "../includes/libftprintf.h"
 
 static void	ft_convbase(unsigned long long nbr, char *num, char *base, size_t i)
 {
